@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:src="@drawable/red_bg"
+        tools:layout_editor_absoluteX="-157dp"
+        tools:layout_editor_absoluteY="-89dp" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="Temperature Converter"
+        android:textColor="@color/white"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/editTextTemperature"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="60dp"
+        android:gravity="center"
+        android:hint="Enter Temperature"
+        android:inputType="numberDecimal|numberSigned"
+        android:maxLength="15"
+        android:textColor="@color/white"
+        android:textColorHint="#B7FFFFFF"
+        android:textSize="40sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <RadioGroup
+        android:id="@+id/radioGroupUnits"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextTemperature">
+
+        <RadioButton
+            android:id="@+id/radioButtonCelsius"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:text="Celsius"
+            android:textColor="@color/white" />
+
+        <RadioButton
+            android:id="@+id/radioButtonFahrenheit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Fahrenheit"
+            android:textColor="@color/white" />
+
+        <RadioButton
+            android:id="@+id/radioButtonKelvin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Kelvin"
+            android:textColor="@color/white" />
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/buttonConvert"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="68dp"
+        android:text="Convert"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/radioGroupUnits" />
+
+
+
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buttonConvert">
+
+        <LinearLayout
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center">
+            <TextView
+                android:id="@+id/textViewResultdata1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:padding="10dp"
+                android:text="24"
+                android:textColor="#F34336"
+                android:textSize="40sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toStartOf="@+id/buttonConvert"
+                app:layout_constraintStart_toStartOf="@+id/imageView"
+                tools:layout_editor_absoluteY="476dp" />
+        <TextView
+            android:id="@+id/textViewResult1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="Fahrenheit"
+            android:textColor="#F34336"
+            android:textSize="14sp"
+            tools:layout_editor_absoluteX="93dp"
+            tools:layout_editor_absoluteY="579dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center">
+            <TextView
+                android:id="@+id/textViewResultdata2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+
+                android:padding="10dp"
+                android:text="24"
+                android:textColor="#F34336"
+                android:textSize="40sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="@+id/imageView"
+                app:layout_constraintStart_toEndOf="@+id/buttonConvert"
+                tools:layout_editor_absoluteY="476dp" />
+
+            <TextView
+            android:id="@+id/textViewResult2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="Kelvin"
+            android:textColor="#F34336"
+            android:textSize="14sp"
+            tools:layout_editor_absoluteX="266dp"
+            tools:layout_editor_absoluteY="579dp" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
